@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Akira Toriyama Tribute</title>
+  <link rel="stylesheet" href="TributePage.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">Akira Toriyama</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#bio">Biography</a></li>
+        <li><a href="#works">Notable Works</a></li>
+        <li><a href="#legacy">Legacy</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+      </ul>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="legacy" class="legacy-section">
+  <div class="para-block left">
+    <p>
+      Akira Toriyama’s legacy is deeply woven into the fabric of global pop culture, thanks to his groundbreaking work as a manga artist, character designer, and storyteller. He revolutionized the shōnen genre with his iconic series Dragon Ball, which began as a whimsical adventure and evolved into a cultural phenomenon that redefined action storytelling. With its unforgettable characters like Goku, Vegeta, and Piccolo, and themes of perseverance, friendship, and transformation, Dragon Ball became a multi-generational touchstone that inspired countless manga, anime, games, and creators around the world. Toriyama's ability to blend humor, emotion, and high-stakes combat into an accessible and entertaining format set a new standard in the industry.
+    </p>
+  </div>
+  <div class="para-block right">
+    <p>
+      Beyond Dragon Ball, Toriyama's influence extended into gaming and beyond. His character designs for the Dragon Quest series became some of the most iconic visuals in Japanese RPG history, and his unique art style—marked by expressive faces, dynamic poses, and mechanical precision—remains instantly recognizable. Even decades after their debut, his creations continue to resonate with fans of all ages. Akira Toriyama didn't just entertain—he inspired. His passing marked the end of an era, but his stories, artistry, and imagination will forever live on in the hearts of millions, making him one of the most influential creators in modern entertainment history.
+    </p>
+  </div>
+</section>
+
+    <!-- Add more sections like works, legacy, gallery here -->
+  </main>
+
+</body>
+
+<script>
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navLinks = document.querySelector('.nav-links');
+
+  mobileMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+
+</html>

@@ -1,0 +1,171 @@
+/* Reset + Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  padding: 15px 30px;
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav {
+  position: relative;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #f9c923;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+.hero-section {
+  background: url('AkiraToriyama2.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 100px 20px;
+  color: white;
+  text-align: center;
+}
+
+/* Legacy Section Styling */
+.legacy-section {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 60px 20px;
+   background-image: url('AkiraToriyama.avif'); /* fallback or use background image */
+  background-size: cover;
+  background-position: center;
+}
+
+.para-block {
+  max-width: 600px;
+  width: 90%;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.3rem; /* ← increase this value */
+  line-height: 1.8;   /* optional: better readability */
+}
+
+
+.para-block.left {
+  align-self: flex-start;
+  color: cyan;
+}
+
+.para-block.right {
+  align-self: flex-end;
+  color: white;
+}
+
+/* Optional responsiveness */
+@media (max-width: 768px) {
+  .para-block {
+    align-self: center;
+    color: white;
+  }
+
+  .para-block.left {
+    color: cyan;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #111;
+    width: 200px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .legacy-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-para, .right-para {
+    max-width: 100%;
+  }
+}
+
+/* Main content */
+main {
+  padding: 40px 20px;
+}
+
+main h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+main p {
+  max-width: 800px;
+}
